@@ -6,6 +6,10 @@ namespace NiniaDomain.Classes
 {
     public class Ninja
     {
+        public Ninja()
+        {
+            EquipmentOwned = new List<NinijaEquipnent>();
+        }
         public int Id { get; set; }
         public string Name { get; set; }
         public bool ServedInOniwaban { get; set; }
@@ -16,6 +20,10 @@ namespace NiniaDomain.Classes
 
     public class Clan
     {
+        public Clan()
+        {
+            Ninijas = new List<Ninja>();
+        }
         public int Id { get; set; }
         public string ClanName { get; set; }
         public List<Ninja> Ninijas { get; set; }
